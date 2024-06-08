@@ -1,0 +1,65 @@
+﻿@model IEnumerable<practicaV1.Models.cCliente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.documento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fkNacionalidad)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+             <td>
+                    @Html.DisplayFor(modelItem => item.idCliente)
+              </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.documento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fkNacionalidad)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.idCliente">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.idCliente">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.idCliente">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

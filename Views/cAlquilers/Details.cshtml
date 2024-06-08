@@ -1,0 +1,72 @@
+﻿@model practicaV1.Models.cAlquiler
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>cAlquiler</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.idAlquiler)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.idAlquiler)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fechaHoraEntrada)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fechaHoraEntrada)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fechaHoraSalida)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fechaHoraSalida)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.costoTotal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.costoTotal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.observacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.observacion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fkHabitacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fkHabitacion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fkCliente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fkCliente)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.fkRegistrador)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.fkRegistrador)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fkEstado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fkEstado)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.idAlquiler">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

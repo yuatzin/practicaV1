@@ -1,0 +1,36 @@
+﻿@model practicaV1.Models.cNacionalidad
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>cNacionalidad</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.idNacionalidad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.idNacionalidad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.pais)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.pais)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nacionalidad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nacionalidad)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.idNacionalidad">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,83 @@
+﻿@model IEnumerable<practicaV1.Models.cAlquiler>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idAlquiler)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fechaHoraEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fechaHoraSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.costoTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.observacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fkHabitacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fkCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fkRegistrador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fkEstado)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idAlquiler)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaHoraEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaHoraSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.costoTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.observacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fkHabitacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fkCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fkRegistrador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fkEstado)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.idAlquiler">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.idAlquiler">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.idAlquiler">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
